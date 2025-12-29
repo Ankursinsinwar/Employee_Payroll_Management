@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Payroll Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f6f8;
+            color: #42515F;
+        }
+
+
+        .profile-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .form-check-input[type="radio"] {
+            background-color: #DEDEDE;
+            cursor: pointer;
+        }
+
+        .form-check-input:hover {
+            background-color: #B4B4B4;
+            border-color: #B4B4B4;
+        }
+
+        .form-check-input:checked {
+            background-color: #B7B7B7;
+            border-color: #B4B4B4;
+        }
+        
+
+        .profile-option img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .btn{
+            background-color: #E2E2E2;
+            border: 1px #969696 solid;
+        }
+        .btn:hover{
+            background-color: #B4B4B4;
+            border: 1px #969696 solid;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-white px-5 payroll-navbar">
+  <a class="navbar-brand d-flex align-items-center" href="./index.html">
+    <img
+      src="./img/OIP.png"
+    alt="😎"
+      class="me-2"
+      width="50"
+      height="47"
+    />
+    <div>
+        <span class="d-block fw-bold py-0 lh-1" style="color: #82A70C;">EMPLOYEE</span>
+        <span class="fw-bold py-0 lh-1" style="color: #42515F;">PAYROLL</span>
+    </div>
+  </a>
+</nav>
+
+
+    <div class="container mt-5">
+        <div class="card shadow-sm p-5 mx-auto" style="max-width: 1000px;">
+            <h5 class="fw-bold px-5 mb-5" style="color: #42515F;">Employee Payroll Form</h5>
+
+            <form class="px-5">
+
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row mb-3 align-items-center">
+                    <label class="col-sm-3 col-form-label">Profile image</label>
+
+                    <div class="col-sm-9 d-flex gap-5 align-items-center">
+
+                        <label class="profile-option py-2">
+                            <input class="form-check-input " type="radio" name="profile">
+                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                        </label>
+
+                        <label class="profile-option">
+                            <input class="form-check-input " type="radio" name="profile">
+                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                        </label>
+
+                        <label class="profile-option">
+                            <input class="form-check-input " type="radio" name="profile">
+                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                        </label>
+
+                        <label class="profile-option">
+                            <input class="form-check-input " type="radio" name="profile">
+                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                        </label>
+
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Gender</label>
+                    <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="gender">
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender">
+                            <label class="form-check-label">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Department</label>
+                    <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"> HR
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"> Sales
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"> Finance
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"> Engineer
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"> Others
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Salary</label>
+                    <div class="col-sm-9">
+                        <select class="form-select">
+                            <option>Select Salary</option>
+                            <option>₹ 10,000</option>
+                            <option>₹ 20,000</option>
+                            <option>₹ 30,000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Start Date</label>
+                    <div class="col-sm-9 row">
+                        <div class="col">
+                            <select class="form-select">
+                                <option selected>Day</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select">
+                                <option selected>Month</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select">
+                                <option selected>Year</option>
+                                <option>2011</option>
+                                <option>2012</option>
+                                <option>2013</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                                <option>2026</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-sm-3 col-form-label">Notes</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class=" d-flex justify-content-between">
+                        <button class="btn px-5">Cancel</button>
+                        <div>
+                            <button class="btn mx-2 px-5">Submit</button>
+                            <button class="btn px-5">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
