@@ -55,9 +55,9 @@
 
 <body>
     <nav class="navbar navbar-light bg-white px-5 payroll-navbar">
-  <a class="navbar-brand d-flex align-items-center" href="./index.html">
+  <a class="navbar-brand d-flex align-items-center" href="../index.html">
     <img
-      src="./img/OIP.png"
+      src="../assets/OIP.png"
     alt="😎"
       class="me-2"
       width="50"
@@ -80,34 +80,37 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="name">
+                        <p class="text-danger small mt-1 d-none" id="name-error">Enter valid name</p>
                     </div>
                 </div>
 
                 <div class="row mb-3 align-items-center">
                     <label class="col-sm-3 col-form-label">Profile image</label>
-
                     <div class="col-sm-9 d-flex gap-5 align-items-center">
-
                         <label class="profile-option py-2">
-                            <input class="form-check-input " type="radio" name="profile">
-                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                            <input class="form-check-input " type="radio"  name="profile" value="../assets/OIP.png">
+                            <img src="../assets/OIP.png" class="avatar" alt="😎">
                         </label>
 
                         <label class="profile-option">
-                            <input class="form-check-input " type="radio" name="profile">
-                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                            <input class="form-check-input " type="radio"  name="profile" value="../assets/OIP.png">
+                            <img src="../assets/OIP.png" class="avatar" alt="😎">
                         </label>
 
                         <label class="profile-option">
-                            <input class="form-check-input " type="radio" name="profile">
-                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                            <input class="form-check-input " type="radio"  name="profile" value="../assets/OIP.png">
+                            <img src="../assets/OIP.png" class="avatar" alt="😎">
                         </label>
 
                         <label class="profile-option">
-                            <input class="form-check-input " type="radio" name="profile">
-                            <img src="./img/OIP.png" class="avatar" alt="😎">
+                            <input class="form-check-input " type="radio"  name="profile" value="../assets/OIP.png">
+                            <img src="../assets/OIP.png" class="avatar" alt="😎">
                         </label>
+
+                    </div>
+                    <div class="col-sm-3 ">
+                        <p class="text-danger small text-align-center d-none" id="img-error">Please select a profile</p>
 
                     </div>
                 </div>
@@ -117,13 +120,17 @@
                     <label class="col-sm-3 col-form-label">Gender</label>
                     <div class="col-sm-9">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input " type="radio" name="gender">
+                            <input class="form-check-input " type="radio" name="gender" value="Male">
                             <label class="form-check-label">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender">
+                            <input class="form-check-input" type="radio" name="gender" value="Female">
                             <label class="form-check-label">Female</label>
                         </div>
+                        <p class="text-danger small mt-1 d-none" id="gender-error">
+  Please select gender
+</p>
+
                     </div>
                 </div>
 
@@ -131,32 +138,38 @@
                     <label class="col-sm-3 col-form-label">Department</label>
                     <div class="col-sm-9">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"> HR
+                            <input class="form-check-input department" type="checkbox" value="HR"> HR
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"> Sales
+                            <input class="form-check-input department" type="checkbox" value="Sales"> Sales
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"> Finance
+                            <input class="form-check-input department" type="checkbox" value="Finance"> Finance
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"> Engineer
+                            <input class="form-check-input department" type="checkbox" value="Engineer"> Engineer
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox"> Others
+                            <input class="form-check-input department" type="checkbox" value="Others"> Others
                         </div>
+                        <p class="text-danger small mt-1 d-none" id="dep-error">
+                            Please select dep
+                        </p>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Salary</label>
-                    <div class="col-sm-9">
-                        <select class="form-select">
+                    <div class="col-sm-4">
+                        <select class="form-select" id="salary" required>
                             <option>Select Salary</option>
-                            <option>₹ 10,000</option>
-                            <option>₹ 20,000</option>
-                            <option>₹ 30,000</option>
+                            <option> 10,000</option>
+                            <option> 20,000</option>
+                            <option> 30,000</option>
                         </select>
+                        <p class="text-danger small mt-1 d-none" id="salary-error">
+  Please select salary
+</p>
                     </div>
                 </div>
 
@@ -164,8 +177,8 @@
                     <label class="col-sm-3 col-form-label">Start Date</label>
                     <div class="col-sm-9 row">
                         <div class="col">
-                            <select class="form-select">
-                                <option selected>Day</option>
+                            <select class="form-select" id="day" >
+                                <option>Day</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -200,10 +213,10 @@
                             </select>
                         </div>
                         <div class="col">
-                            <select class="form-select">
-                                <option selected>Month</option>
-                                <option>1</option>
-                                <option>2</option>
+                            <select class="form-select" id="month" >
+                                <option>Month</option>
+                                <option>JAN</option>
+                                <option>FEB</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
@@ -217,8 +230,8 @@
                             </select>
                         </div>
                         <div class="col">
-                            <select class="form-select">
-                                <option selected>Year</option>
+                            <select class="form-select" id="year" >
+                                <option>Year</option>
                                 <option>2011</option>
                                 <option>2012</option>
                                 <option>2013</option>
@@ -238,7 +251,11 @@
 
                             </select>
                         </div>
+                        <p class="text-danger small mt-1 d-none" id="date-error">
+                            Please select valid date
+                        </p>
                     </div>
+
                 </div>
 
                 <div class="row mb-4">
@@ -250,10 +267,10 @@
 
                 <div class="row">
                     <div class=" d-flex justify-content-between">
-                        <button class="btn px-5">Cancel</button>
+                        <button class="btn px-5" onclick="window.location.href=`../index.html`">Cancel</button>
                         <div>
-                            <button class="btn mx-2 px-5">Submit</button>
-                            <button class="btn px-5">Reset</button>
+                            <button class="btn mx-2 px-5" type="submit">Submit</button>
+                            <button class="btn px-5" type="reset">Reset</button>
                         </div>
                     </div>
                 </div>
@@ -263,5 +280,6 @@
     </div>
 
 </body>
+<script src="../scripts/formDOM.js"></script>
 
 </html>

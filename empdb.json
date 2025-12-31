@@ -1,0 +1,28 @@
+{
+  "empeloye": [
+    {
+      "id": "1030",
+      "img": "../assets/OIP.png",
+      "name": "Pilla",
+      "gender": "Male",
+      "department": [],
+      "salary": "10,000",
+      "start_date": [
+        2,
+        3,
+        2013
+      ]
+    },
+    {
+      "id": "2d5c",
+      "name": "",
+      "department": [],
+      "salary": "Select Salary",
+      "start_date": [
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}
