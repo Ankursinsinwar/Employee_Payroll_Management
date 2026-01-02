@@ -2,6 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const empId = params.get("id");
 
 /* ================== EDIT MODE ================== */
+
 if (empId) {
   fetch(`http://localhost:3000/empeloye/${empId}`)
     .then(res => res.json())
@@ -38,20 +39,49 @@ function validateForm() {
   const salary = document.getElementById("salary").value;
   const img = document.querySelector("input[name='profile']:checked");
   const gender = document.querySelector("input[name='gender']:checked");
-const dept = Array.from(
+  const dept = Array.from(
     document.querySelectorAll(".department:checked")
   ).map(dep => dep.value);
-  
+
   const day = document.getElementById("day").value;
   const month = document.getElementById("month").value;
   const year = document.getElementById("year").value;
-
+  let nv = true;
+  let pr = true;
   // Name
   if (name.length < 3) {
     showError("name-error");
     isValid = false;
-  } else hideError("name-error");
-  
+  }
+  else {
+    hideError("name-error");
+    const us = []
+    fetch(`http://localhost:3000/empeloye`)
+      .then(res => res.json())
+      .then(data => {
+        console.log("data:",data)
+        data.forEach(n => {
+          console.log("e" ,n)
+          us.push(n.name);
+        })
+        console.log("us",us)
+        console.log("nm",name)
+        console.log("nm",us[0])
+        console.log(us.includes(name))
+
+      });
+    // if (!us.includes(name)) {
+    //   // nv = false;
+    //   console.log("nv",nv)
+    //   // showError("name-present");
+
+    // }else{
+    //   nv = false;
+    //   console.log("nv",nv)
+    //   showError("name-present");
+    // }
+  }
+
   // profile
   if (!img) {
     showError("img-error");
@@ -65,13 +95,13 @@ const dept = Array.from(
   } else hideError("gender-error");
 
   // Department
-   if (dept[0] == null) {
+  if (dept[0] == null) {
     showError("dep-error");
     isValid = false;
   } else hideError("dep-error");
 
   // Salary
-  if (salary==="Select Salary") {
+  if (salary === "Select Salary") {
     showError("salary-error");
     isValid = false;
   } else hideError("salary-error");

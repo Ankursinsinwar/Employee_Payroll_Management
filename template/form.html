@@ -5,52 +5,7 @@
     <meta charset="UTF-8">
     <title>Employee Payroll Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f6f8;
-            color: #42515F;
-        }
-
-
-        .profile-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .form-check-input[type="radio"] {
-            background-color: #DEDEDE;
-            cursor: pointer;
-        }
-
-        .form-check-input:hover {
-            background-color: #B4B4B4;
-            border-color: #B4B4B4;
-        }
-
-        .form-check-input:checked {
-            background-color: #B7B7B7;
-            border-color: #B4B4B4;
-        }
-        
-
-        .profile-option img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .btn{
-            background-color: #E2E2E2;
-            border: 1px #969696 solid;
-        }
-        .btn:hover{
-            background-color: #B4B4B4;
-            border: 1px #969696 solid;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/form.css">
 </head>
 
 <body>
@@ -82,6 +37,7 @@
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="name">
                         <p class="text-danger small mt-1 d-none" id="name-error">Enter valid name</p>
+                        <p class="text-danger small mt-1 d-none" id="name-present">name already exist</p>
                     </div>
                 </div>
 
@@ -179,15 +135,15 @@
                         <div class="col">
                             <select class="form-select" id="day" >
                                 <option>Day</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
                                 <option>10</option>
                                 <option>11</option>
                                 <option>12</option>
@@ -215,18 +171,18 @@
                         <div class="col">
                             <select class="form-select" id="month" >
                                 <option>Month</option>
-                                <option>JAN</option>
-                                <option>FEB</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
+                                <option>Jan</option>
+                                <option>Feb</option>
+                                <option>Mar</option>
+                                <option>Apr</option>
+                                <option>May</option>
+                                <option>Jun</option>
+                                <option>Jul</option>
+                                <option>Aug</option>
+                                <option>Sep</option>
+                                <option>Oct</option>
+                                <option>Nov</option>
+                                <option>Dec</option>
                             </select>
                         </div>
                         <div class="col">
@@ -280,6 +236,8 @@
     </div>
 
 </body>
-<script src="../scripts/formDOM.js"></script>
+<!-- <script src="../scripts/formDOM.js"></script> -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../scripts/formJQuery.js"></script>
 
 </html>

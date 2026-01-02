@@ -1,0 +1,44 @@
+body {
+            background-color: #f5f6f8;
+            color: #42515F;
+        }
+
+
+        .profile-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .form-check-input[type="radio"] {
+            background-color: #DEDEDE;
+            cursor: pointer;
+        }
+
+        .form-check-input:hover {
+            background-color: #B4B4B4;
+            border-color: #B4B4B4;
+        }
+
+        .form-check-input:checked {
+            background-color: #B7B7B7;
+            border-color: #B4B4B4;
+        }
+        
+
+        .profile-option img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .btn{
+            background-color: #E2E2E2;
+            border: 1px #969696 solid;
+        }
+        .btn:hover{
+            background-color: #B4B4B4;
+            border: 1px #969696 solid;
+        }

@@ -32,23 +32,19 @@ document.addEventListener("click", async (e) => {
 
 async function fetchData() {
     try {
-        // 1. Fetch data from API
         const response = await fetch('http://localhost:3000/empeloye');
 
-        // Check if the request was successful
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        // 2. Parse the JSON
         const users = await response.json();
         users.reverse();
 
 
-        // 3. Select the DOM element
         const tb = document.getElementById('tbody');
+        tb.innerHTML = '';
 
-        // 4. Manipulate the DOM
         users.forEach(user => {
             const trow = document.createElement('tr');
 
@@ -93,7 +89,6 @@ async function fetchData() {
     }
 }
 
-// Call the function
 fetchData();
 
 const searchInput = document.getElementById("search-inp");
