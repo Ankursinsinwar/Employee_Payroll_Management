@@ -1,34 +1,19 @@
 {
   "empeloye": [
     {
-      "id": "eae4",
-      "img": "../assets/OIP.png",
+      "id": "74d9",
+      "img": "../assets/l.png",
       "name": "Ankur Sinsinwar",
       "gender": "Male",
       "department": [
-        "Engineer",
-        "Others"
+        "Finance",
+        "Engineer"
       ],
       "salary": "30,000",
       "start_date": [
-        19,
-        11,
-        2024
-      ]
-    },
-    {
-      "id": "74d9",
-      "img": "../assets/OIP.png",
-      "name": "Ankur Sinsinwar",
-      "gender": "Male",
-      "department": [
-        "HR"
-      ],
-      "salary": "20,000",
-      "start_date": [
-        14,
-        4,
-        2024
+        16,
+        "Mar",
+        2025
       ]
     }
   ]

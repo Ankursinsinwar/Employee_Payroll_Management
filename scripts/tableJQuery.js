@@ -65,7 +65,7 @@ $(document).ready(function () {
         const tdep = $("<td>");
         user.department.forEach(dep => {
           const tspan = $("<span>")
-            .addClass("badge badge-costum")
+            .addClass("badge badge-costum mx-1")
             .text(dep);
           tdep.append(tspan);
         });
@@ -101,14 +101,16 @@ $(document).ready(function () {
 
   fetchData();
 
-  /* ================= SEARCH ================= */
 
   $("#search-inp").on("input", function () {
     const inp = $(this).val().toLowerCase();
 
     $("#tbody tr").each(function () {
       const nameRow = $(this).find("td:first").text().toLowerCase();
-      $(this).toggle(nameRow.includes(inp));
+      const depRow = $(this).find("td").eq(2).text().toLowerCase();
+      // console.log(nameRow);
+      // console.log(depRow);
+      $(this).toggle((nameRow.includes(inp) || depRow.includes(inp)));
     });
   });
 

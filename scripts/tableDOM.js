@@ -61,7 +61,7 @@ async function fetchData() {
             const tdep = document.createElement('td');
             user.department.forEach(dep => {
                 const tspan = document.createElement('span');
-                tspan.classList.add("badge", "badge-costum");
+                tspan.classList.add("badge", "badge-costum","mx-1");
                 tspan.textContent = dep;
                 tdep.appendChild(tspan);
             })
@@ -98,8 +98,12 @@ searchInput.addEventListener("input", () => {
   const rows = document.querySelectorAll("#tbody tr");
 
   rows.forEach(row => {
-    const nameCell = row.querySelector("td").innerText.toLowerCase();
-    row.style.display = nameCell.includes(filter) ? "" : "none";
+    const cells = row.querySelectorAll("td");
+    const nameCell = cells[0].innerText.trim().toLowerCase();
+    const depCell = cells[2].innerText.trim().toLowerCase();
+    // console.log(nameCell);
+    // console.log(depCell);
+    row.style.display = (nameCell.includes(filter) || depCell.includes(filter)) ? "" : "none";
   });
 });
 

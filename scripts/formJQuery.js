@@ -76,7 +76,7 @@ function validateForm() {
   } else hideError("salary-error");
 
   // Date
-  if (day === "Day" || month === "Month" || year === "Year") {
+  if (day === "Day" && month === "Month" && year === "Year") {
     showError("date-error");
     isValid = false;
   } else hideError("date-error");
@@ -102,7 +102,7 @@ $("form").on("submit", function (e) {
     salary: $("#salary").val(),
     start_date: [
       Number($("#day").val()),
-      Number($("#month").val()),
+      String($("#month").val()),
       Number($("#year").val())
     ]
   };
