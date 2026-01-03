@@ -35,7 +35,7 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" title="Name should be 2-20 characters long and contain only letters, spaces, apostrophes, hyphens, or periods." name="name">
                         <p class="text-danger small mt-1 d-none" id="name-error">Enter valid name</p>
                         <p class="text-danger small mt-1 d-none" id="name-present">name already exist</p>
                     </div>
@@ -43,7 +43,8 @@
 
                 <div class="row mb-3 align-items-center">
                     <label class="col-sm-3 col-form-label">Profile image</label>
-                    <div class="col-sm-9 d-flex gap-5 align-items-center">
+                    <div class="col-sm-9 d-flex flex-column">
+                    <div class="col-sm-9 d-flex flex-row gap-5 align-items-center">
                         <label class="profile-option py-2">
                             <input class="form-check-input " type="radio"  name="profile" value="../assets/l.png">
                             <img src="../assets/l.png" class="avatar" alt="😎">
@@ -68,6 +69,7 @@
                     <div class="col-sm-3 ">
                         <p class="text-danger small text-align-center d-none" id="img-error">Please select a profile</p>
 
+                    </div>
                     </div>
                 </div>
 
@@ -225,7 +227,8 @@
                     <div class=" d-flex justify-content-between">
                         <button class="btn px-5" onclick="window.location.href=`../index.html`">Cancel</button>
                         <div>
-                            <button class="btn mx-2 px-5" type="submit">Submit</button>
+                            <button id="submit" class="btn mx-2 px-5" type="submit">Submit</button>
+                            <button id="update" class="d-none btn mx-2 px-5" type="submit">Update</button>
                             <button class="btn px-5" type="reset">Reset</button>
                         </div>
                     </div>
@@ -236,8 +239,8 @@
     </div>
 
 </body>
-<!-- <script src="../scripts/formDOM.js"></script> -->
- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="../scripts/formJQuery.js"></script>
+<script src="../scripts/formDOM.js"></script>
+ <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../scripts/formJQuery.js"></script> -->
 
 </html>

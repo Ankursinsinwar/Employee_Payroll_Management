@@ -21,6 +21,11 @@ if (empId) {
       document.getElementById("month").value = data.start_date[1];
       document.getElementById("year").value = data.start_date[2];
     });
+
+      hideError("submit");
+      showError("update");
+
+
 }
 
 /* ================== VALIDATION HELPERS ================== */
@@ -31,6 +36,8 @@ function showError(id) {
 function hideError(id) {
   document.getElementById(id).classList.add("d-none");
 }
+
+
 
 function validateForm() {
   let isValid = true;
@@ -55,21 +62,33 @@ function validateForm() {
   }
   else {
     hideError("name-error");
-    const us = []
+
     fetch(`http://localhost:3000/empeloye`)
       .then(res => res.json())
       .then(data => {
-        console.log("data:",data)
-        data.forEach(n => {
-          console.log("e" ,n)
-          us.push(n.name);
-        })
-        console.log("us",us)
-        console.log("nm",name)
-        console.log("nm",us[0])
-        console.log(us.includes(name))
+        // console.log("data:",data)
+    if (data.some(data => data.name.toLowerCase() === name.toLowerCase())) {
+      showError("name-present")
+      isValid = false;
+    }
+    });
 
-      });
+
+
+    // fetch(`http://localhost:3000/empeloye`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log("data:",data)
+    //     data.forEach(n => {
+    //       console.log("e" ,n)
+    //       us.push(n.name);
+    //     })
+    //     console.log("us",us)
+    //     console.log("nm",name)
+    //     console.log("nm",us[0])
+    //     console.log(us.includes(name))
+
+    //   });
     // if (!us.includes(name)) {
     //   // nv = false;
     //   console.log("nv",nv)
@@ -167,7 +186,15 @@ form.addEventListener("submit", async (e) => {
 
 /* ================== UX IMPROVEMENTS ================== */
 document.getElementById("name").addEventListener("input", () => hideError("name-error"));
+document.querySelector("input[name='profile']").addEventListener("change", () => hideError("img-error"));
+document.querySelector("input[name='gender']").addEventListener("change", () => hideError("gender-error"));
+document.querySelector(`.department[value="HR"]`).addEventListener("change", () => hideError("dep-error"));
+document.querySelector(`.department[value="Finance"]`).addEventListener("change", () => hideError("dep-error"));
+document.querySelector(`.department[value="Sales"]`).addEventListener("change", () => hideError("dep-error"));
+document.querySelector(`.department[value="Finance"]`).addEventListener("change", () => hideError("dep-error"));
+document.querySelector(`.department[value="Engineer"]`).addEventListener("change", () => hideError("dep-error"));
+document.querySelector(`.department[value="Others"]`).addEventListener("change", () => hideError("dep-error"));
 document.getElementById("salary").addEventListener("change", () => hideError("salary-error"));
-document.getElementById("day").addEventListener("change", () => hideError("day-error"));
-document.getElementById("month").addEventListener("change", () => hideError("month-error"));
-document.getElementById("year").addEventListener("change", () => hideError("year-error"));
+document.getElementById("day").addEventListener("change", () => hideError("date-error"));
+document.getElementById("month").addEventListener("change", () => hideError("date-error"));
+document.getElementById("year").addEventListener("change", () => hideError("date-error"));

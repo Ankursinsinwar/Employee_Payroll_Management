@@ -16,6 +16,8 @@ if (empId) {
     $("#day").val(data.start_date[0]);
     $("#month").val(data.start_date[1]);
     $("#year").val(data.start_date[2]);
+    hideError("submit");
+    showError("update");
   });
 }
 

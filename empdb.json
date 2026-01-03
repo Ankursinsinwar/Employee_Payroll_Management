@@ -3,10 +3,10 @@
     {
       "id": "74d9",
       "img": "../assets/l.png",
-      "name": "Ankur Sinsinwar",
+      "name": "Lufy",
       "gender": "Male",
       "department": [
-        "Finance",
+        "HR",
         "Engineer"
       ],
       "salary": "30,000",
@@ -14,6 +14,54 @@
         16,
         "Mar",
         2025
+      ]
+    },
+    {
+      "id": "bda1",
+      "img": "../assets/z.png",
+      "name": "Roronova Zoro",
+      "gender": "Male",
+      "department": [
+        "Engineer",
+        "Others"
+      ],
+      "salary": "30,000",
+      "start_date": [
+        15,
+        "Sep",
+        2024
+      ]
+    },
+    {
+      "id": "3a47",
+      "img": "../assets/n.png",
+      "name": "Nami",
+      "gender": "Female",
+      "department": [
+        "Sales",
+        "Finance"
+      ],
+      "salary": "20,000",
+      "start_date": [
+        18,
+        "May",
+        2025
+      ]
+    },
+    {
+      "id": "98f6",
+      "img": "../assets/r.png",
+      "name": "Robin",
+      "gender": "Female",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "salary": "20,000",
+      "start_date": [
+        13,
+        "Nov",
+        2024
       ]
     }
   ]
