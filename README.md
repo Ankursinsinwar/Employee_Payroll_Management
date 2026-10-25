@@ -2,10 +2,12 @@
 ____________________________________________________________________________________________________________
 
 ### Employee Table: 
-<img width="1867" height="964" alt="image" src="https://github.com/user-attachments/assets/7d47d51e-8f49-4293-9839-4f3e6cd37661" />
+<img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/44ad27d5-7ebf-4386-a465-c39bc9b89c11" />
+
 
 ____________________________________________________________________________________________________________
 
 ### Add Employee Form: 
-<img width="1885" height="949" alt="image" src="https://github.com/user-attachments/assets/f8bbde0c-1770-413c-a7e2-5017142768d3" />
+<img width="1913" height="917" alt="image" src="https://github.com/user-attachments/assets/d5e44227-19d8-4100-8b53-69e5f41490ff" />
+
 
