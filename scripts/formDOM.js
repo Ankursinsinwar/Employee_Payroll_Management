@@ -154,7 +154,7 @@ form.addEventListener("submit", async (e) => {
 
   const start_date = [
     Number(document.getElementById("day").value),
-    Number(document.getElementById("month").value),
+    String(document.getElementById("month").value),
     Number(document.getElementById("year").value)
   ];
 
